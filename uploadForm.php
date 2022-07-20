@@ -18,7 +18,7 @@ echo "Hallo User: ".$userid;
 </head>
 
 <body>
-    <form>
+    <form action="upload.php" method="post">
         <label for="title">Titel:</label><br>
         <input type="text" id="title" name="title" required><br>
         <label for="description">Beschreibung:</label><br>
@@ -27,9 +27,9 @@ echo "Hallo User: ".$userid;
         <textarea id="text" name="text" required></textarea><br>
         <label for="images">Bild:</label><br>
         <input type="file" id="images" name="images" multiple required><br>
-        <input type="submit" value="Upload">
+        <input type="submit" name="submit" value="Submit">
     </form>
-    <button onclick="window.location.href='logout.php'">Zurück</button>
+    <button onclick="window.location.href='logout.php'">Logout</button>
 </body>
 
 </html>
