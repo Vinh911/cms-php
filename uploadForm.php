@@ -26,7 +26,7 @@ echo "Hallo User: ".$userid;
         <label for="text">Text:</label><br>
         <textarea id="text" name="text" required></textarea><br>
         <label for="images">Bilder:</label><br>
-        <input type="file" id="images" name="images" multiple required><br>
+        <input type="file" id="images" name="images[]" multiple required><br>
         <input type="submit" name="submit" value="Submit">
     </form>
     <button onclick="window.location.href='logout.php'">Logout</button>
