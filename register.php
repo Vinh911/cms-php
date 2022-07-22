@@ -1,17 +1,19 @@
 <?php 
 session_start();
 
-include 'connection.php';
+include 'api/connection.php';
 
 ?>
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
+
 <head>
-  <title>Registrierung</title>    
-</head> 
+    <title>Registrierung</title>
+</head>
+
 <body>
- 
-<?php
+
+    <?php
 $showFormular = true;
 
 if(isset($_GET['register'])) {
@@ -61,23 +63,24 @@ if(isset($_GET['register'])) {
  
 if($showFormular) {
 ?>
- 
-<form action="?register=1" method="post">
-E-Mail:<br>
-<input type="email" size="40" maxlength="250" name="email"><br><br>
- 
-Dein Passwort:<br>
-<input type="password" size="40"  maxlength="250" name="passwort"><br>
- 
-Passwort wiederholen:<br>
-<input type="password" size="40" maxlength="250" name="passwort2"><br><br>
- 
-<input type="submit" value="Abschicken">
-</form>
- 
-<?php
+
+    <form action="?register=1" method="post">
+        E-Mail:<br>
+        <input type="email" size="40" maxlength="250" name="email"><br><br>
+
+        Dein Passwort:<br>
+        <input type="password" size="40" maxlength="250" name="passwort"><br>
+
+        Passwort wiederholen:<br>
+        <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
+
+        <input type="submit" value="Abschicken">
+    </form>
+
+    <?php
 }
 ?>
- 
+
 </body>
+
 </html>
