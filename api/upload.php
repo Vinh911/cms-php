@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 include 'connection.php';
 
 if(isset($_POST['submit'])) {
@@ -43,9 +40,9 @@ if(isset($_POST['submit'])) {
         
         //insert data to images table
         for($i = 0; $i < $countImages; $i++) {
-            $imagePath = "../assets/" . $_FILES['images']['name'][$i];
-            $statement = $pdo->prepare("INSERT INTO images (postId, path) VALUES (:postId, :path)");
-            $result = $statement->execute(array('postId' => $postid, 'path' => $imagePath));
+            $imageName = $_FILES['images']['name'][$i];
+            $statement = $pdo->prepare("INSERT INTO images (postId, path) VALUES (:postId, :imageName)");
+            $result = $statement->execute(array('postId' => $postid, 'imageName' => $imageName));
         }
 
         echo "Post erfolgreich hochgeladen<br>";
