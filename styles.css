@@ -2,6 +2,41 @@ html {
     font-family: monospace;
 }
 
+/*Login*/
+.loginForm {
+    margin: 0 auto;
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.loginForm h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.loginForm input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.loginForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
 /*Navbar*/
 .navbar {
     list-style-type: none;
@@ -30,7 +65,6 @@ html {
 /*upload form*/
 .uploadForm {
     margin: 0 auto;
-
     width: 50%;
     padding: 10px;
     border: 1px solid #ccc;

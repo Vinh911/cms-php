@@ -26,17 +26,18 @@ if(isset($_GET['login'])) {
 
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <?php 
-if(isset($errorMessage)) {
-    echo $errorMessage;
-}
-?>
-
-    <form action="?login=1" method="post">
+        if(isset($errorMessage)) {
+            echo $errorMessage;
+        }
+    ?>
+    <form class="loginForm" action="?login=1" method="post">
+        <h2>Login</h2>
         E-Mail:<br>
         <input type="email" size="40" maxlength="250" name="email"><br><br>
 
