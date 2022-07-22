@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 include 'connection.php';
 
 if(isset($_POST['submit'])) {
@@ -14,7 +17,7 @@ if(isset($_POST['submit'])) {
     for($i = 0; $i < $countImages; $i++) {
         $check = getimagesize($_FILES["images"]["tmp_name"][$i]);
         if($check !== false) {
-            $imagePath = "assets/" . $_FILES['images']['name'][$i];
+            $imagePath = "../assets/" . $_FILES['images']['name'][$i];
             if(file_exists($imagePath)) {
                 echo "Datei existiert bereits<br>";
                 $uploadOk = 0;
@@ -28,7 +31,7 @@ if(isset($_POST['submit'])) {
     if($uploadOk == 1){
         //upload images
         for($i = 0; $i < $countImages; $i++) {
-            $imagePath = "assets/" . $_FILES['images']['name'][$i];
+            $imagePath = "../assets/" . $_FILES['images']['name'][$i];
             move_uploaded_file($_FILES['images']['tmp_name'][$i], $imagePath);
         }
     
@@ -40,7 +43,7 @@ if(isset($_POST['submit'])) {
         
         //insert data to images table
         for($i = 0; $i < $countImages; $i++) {
-            $imagePath = "assets/" . $_FILES['images']['name'][$i];
+            $imagePath = "../assets/" . $_FILES['images']['name'][$i];
             $statement = $pdo->prepare("INSERT INTO images (postId, path) VALUES (:postId, :path)");
             $result = $statement->execute(array('postId' => $postid, 'path' => $imagePath));
         }
