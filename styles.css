@@ -1,5 +1,7 @@
 html {
     font-family: monospace;
+    width: 100vw;
+    height: 100vh;
 }
 
 /*Login*/
@@ -60,6 +62,19 @@ html {
 
 .navbar li a:hover {
     background-color: #111;
+}
+
+/*Footer*/
+.footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    color: #ccc;
 }
 
 /*upload form*/

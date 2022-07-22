@@ -27,5 +27,6 @@ if(!isset($_SESSION['userid'])) {
         <input type="submit" name="submit" value="Submit">
     </form>
 </body>
+<?php include('footer.php'); ?>
 
 </html>

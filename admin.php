@@ -15,5 +15,6 @@ if(!isset($_SESSION['userid'])) {
     <?php include('navbar.php'); ?>
     <p>This is the admin panel</p>
 </body>
+<?php include('footer.php'); ?>
 
 </html>

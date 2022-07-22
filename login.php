@@ -14,7 +14,7 @@ if(isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="uploadForm.php">internen Bereich</a>');
+        die('Login erfolgreich. Weiter zu <a href="admin.php">internen Bereich</a>');
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
@@ -47,5 +47,6 @@ if(isset($_GET['login'])) {
         <input type="submit" value="Abschicken">
     </form>
 </body>
+<?php include('footer.php'); ?>
 
 </html>
