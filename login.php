@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-include 'connection.php';
+include 'api/connection.php';
 
 if(isset($_GET['login'])) {
     $email = $_POST['email'];
@@ -21,27 +21,30 @@ if(isset($_GET['login'])) {
     
 }
 ?>
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
+
 <head>
-  <title>Login</title>    
-</head> 
+    <title>Login</title>
+</head>
+
 <body>
- 
-<?php 
+
+    <?php 
 if(isset($errorMessage)) {
     echo $errorMessage;
 }
 ?>
- 
-<form action="?login=1" method="post">
-E-Mail:<br>
-<input type="email" size="40" maxlength="250" name="email"><br><br>
- 
-Dein Passwort:<br>
-<input type="password" size="40"  maxlength="250" name="passwort"><br>
- 
-<input type="submit" value="Abschicken">
-</form> 
+
+    <form action="?login=1" method="post">
+        E-Mail:<br>
+        <input type="email" size="40" maxlength="250" name="email"><br><br>
+
+        Dein Passwort:<br>
+        <input type="password" size="40" maxlength="250" name="passwort"><br>
+
+        <input type="submit" value="Abschicken">
+    </form>
 </body>
+
 </html>

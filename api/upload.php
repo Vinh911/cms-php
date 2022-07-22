@@ -10,8 +10,7 @@ if(isset($_POST['submit'])) {
     $countImages = count($images);
     $uploadOk = 1;
 
-    //check if image file is a actual image
-    //check if image exists
+    //check if file exists && is a actual image
     for($i = 0; $i < $countImages; $i++) {
         $check = getimagesize($_FILES["images"]["tmp_name"][$i]);
         if($check !== false) {
