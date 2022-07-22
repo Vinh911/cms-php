@@ -54,3 +54,7 @@ html {
     border: none;
     cursor: pointer;
 }
+
+.uploadForm input[type="submit"]:hover {
+    background-color: #3C8C40;
+}
