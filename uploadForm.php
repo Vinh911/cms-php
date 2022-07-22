@@ -10,11 +10,12 @@ if(!isset($_SESSION['userid'])) {
 
 <head>
     <title>Upload</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <?php include('navbar.php'); ?>
-    <form action="api/upload.php" method="post" enctype="multipart/form-data">
+    <form class="uploadForm" action="api/upload.php" method="post" enctype="multipart/form-data">
         <label for="title">Titel:</label><br>
         <input type="text" id="title" name="title" required><br>
         <label for="description">Beschreibung:</label><br>
