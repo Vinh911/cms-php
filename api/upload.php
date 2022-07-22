@@ -47,8 +47,8 @@ if(isset($_POST['submit'])) {
 
         echo "Post erfolgreich hochgeladen<br>";
     }else {
-        echo "Post konnte nicht hochgeladen werden";
+        echo "Post konnte nicht hochgeladen werden<br>";
     }
 }
-
 ?>
+<button><a href="/admin.php">Home</a></button>
