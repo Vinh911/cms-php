@@ -14,7 +14,7 @@ if(isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="index.php">internen Bereich</a>');
+        header('Location: index.php');
     } else {
         $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
@@ -30,12 +30,6 @@ if(isset($_GET['login'])) {
 </head>
 
 <body>
-
-    <?php 
-        if(isset($errorMessage)) {
-            echo $errorMessage;
-        }
-    ?>
     <form class="loginForm" action="?login=1" method="post">
         <h2>Login</h2>
         E-Mail:<br>
@@ -43,7 +37,13 @@ if(isset($_GET['login'])) {
 
         Dein Passwort:<br>
         <input type="password" size="40" maxlength="250" name="passwort"><br>
-
+        <p>
+            <?php 
+                if(isset($errorMessage)) {
+                    echo $errorMessage;
+                }
+            ?>
+        </p>
         <input type="submit" value="Abschicken">
     </form>
 </body>

@@ -43,6 +43,10 @@ html {
     background-color: #45a049;
 }
 
+.loginForm p {
+    text-align: center;
+}
+
 /*Navbar*/
 .navbar {
     list-style-type: none;

@@ -1,7 +1,10 @@
 <?php
 session_start();
 if(!isset($_SESSION['userid'])) {
-    die('Bitte zuerst <a href="login.php">einloggen</a>');
+    ob_start();
+    header('Location: login.php');
+    ob_end_flush();
+    die();
 }
 include 'api/connection.php';
 

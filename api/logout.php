@@ -1,6 +1,9 @@
 <?php
 session_start();
 session_destroy();
- 
-echo "Logout erfolgreich";
+
+ob_start();
+header('Location: ../login.php');
+ob_end_flush();
+die();
 ?>
