@@ -32,8 +32,10 @@ $posts = $statement->fetchAll();
             foreach($posts as $post) {
                 echo '<div class="post">';
                 echo '<h2>' . $post['title'] . '</h2>';
-                echo '<a href="edit.php?id=' . $post['id'] . '">Bearbeiten</a><br>';
-                echo '<a href="api/delete.php?id=' . $post['id'] . '">Löschen</a>';
+                echo '<form action="api/delete.php" method="post">';
+                echo '<input type="hidden" name="id" value="' . $post['id'] . '">';
+                echo '<input type="submit" value="Delete">';
+                echo '</form>';
                 echo '</div>';
             }
         ?>
