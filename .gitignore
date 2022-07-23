@@ -1,3 +1,4 @@
 *.ini
 connection.php
 ftp-sync.json
+.DS_Store

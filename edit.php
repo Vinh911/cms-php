@@ -23,17 +23,21 @@ $posts = $statement->fetchAll();
 <body>
     <?php
         include('navbar.php');
-        foreach($posts as $post) {
-            echo '<div class="post">';
-            echo '<h2>' . $post['title'] . '</h2>';
-            echo '<p>' . $post['text'] . '</p>';
-            echo '<p>' . $post['description'] . '</p>';
-            echo '<a href="edit.php?id=' . $post['id'] . '">Bearbeiten</a>';
-            echo '<a href="api/delete.php?id=' . $post['id'] . '">Löschen</a>';
-            echo '</div>';
-        }
     ?>
-
+    <div class="edit">
+        <div class="post">
+            <p>Post insgesamt: <?php echo count($posts); ?></p>
+        </div>
+        <?php
+            foreach($posts as $post) {
+                echo '<div class="post">';
+                echo '<h2>' . $post['title'] . '</h2>';
+                echo '<a href="edit.php?id=' . $post['id'] . '">Bearbeiten</a><br>';
+                echo '<a href="api/delete.php?id=' . $post['id'] . '">Löschen</a>';
+                echo '</div>';
+            }
+        ?>
+    </div>
 </body>
 <?php include('footer.php'); ?>
 

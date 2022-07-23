@@ -115,3 +115,18 @@ html {
 .uploadForm input[type="submit"]:hover {
     background-color: #3C8C40;
 }
+
+/*Edit*/
+.edit {
+    margin: 0 auto;
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.post {
+    margin: 0 auto;
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
