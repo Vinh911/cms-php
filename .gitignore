@@ -1,2 +1,3 @@
 *.ini
 connection.php
+ftp-sync.json

@@ -51,4 +51,4 @@ if(isset($_POST['submit'])) {
     }
 }
 ?>
-<button><a href="/admin.php">Home</a></button>
+<button><a href="/index.php">Home</a></button>
