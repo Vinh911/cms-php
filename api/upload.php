@@ -40,9 +40,9 @@ if(isset($_POST['submit'])) {
         
         //insert data to images table
         for($i = 0; $i < $countImages; $i++) {
-            $imageName = $_FILES['images']['name'][$i];
-            $statement = $pdo->prepare("INSERT INTO images (postId, path) VALUES (:postId, :imageName)");
-            $result = $statement->execute(array('postId' => $postid, 'imageName' => $imageName));
+            $path = 'assets/' . $_FILES['images']['name'][$i];
+            $statement = $pdo->prepare("INSERT INTO images (postId, path) VALUES (:postId, :path)");
+            $result = $statement->execute(array('postId' => $postid, 'path' => $path));
         }
 
         echo "Post erfolgreich hochgeladen<br>";
