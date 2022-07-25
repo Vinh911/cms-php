@@ -1,7 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+        header("Access-Control-Allow-Origin: *");
+        header("Content-type: application/json");
         include 'connection.php';
         $statement = $pdo->query("SELECT * FROM posts");
         $posts = $statement->fetchAll();
@@ -24,5 +23,5 @@ error_reporting(E_ALL);
             );
             array_push($result, $res);
         }
-        return json_encode($result, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        echo json_encode($result, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>
