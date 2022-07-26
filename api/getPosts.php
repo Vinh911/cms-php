@@ -2,7 +2,7 @@
         header("Access-Control-Allow-Origin: *");
         header("Content-type: application/json");
         include 'connection.php';
-        $statement = $pdo->query("SELECT * FROM posts");
+        $statement = $pdo->query("SELECT * FROM posts ORDER BY id DESC");
         $posts = $statement->fetchAll();
         $result = [];
         foreach($posts as $post) {
@@ -23,5 +23,6 @@
             );
             array_push($result, $res);
         }
+
         echo json_encode($result, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>
