@@ -19,8 +19,9 @@ A simple content management system written in PHP.
 
 ```bash
 git clone https://github.com/Vinh911/cms-php.git
-Create a new MySQL database and user, and import the database.sql file.
+```
+2. Create a new MySQL database and user, and import the database.sql file.
 
-Rename config.example.php to config.php and update the database configuration with your own details.
+3. Rename config.example.php to config.php and update the database configuration with your own details.
 
-Upload the files to your web server and visit the site in your web browser.
+4. Upload the files to your web server and visit the site in your web browser.
